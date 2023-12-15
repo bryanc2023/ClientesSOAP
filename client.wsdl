@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<wsdl:definitions name="Client"
+             targetNamespace="http://example.com/salary.wsdl"
+             xmlns:tns="http://example.com/salary.wsdl"
+             xmlns:xsd1="http://example.com/salary.xsd"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+    <wsdl:types>
+       <xsd:schema targetNamespace="http://example.com/salary.xsd" xmlns:xsd="http://www.w3.org/2000/10/XMLSchema">
+           <xsd:element name="SalaryRequest">
+              <xsd:complexType>
+                  <xsd:all>
+                      <xsd:element name="clientName" type="string"/>
+                      <xsd:element name="hoursWorked" type="float"/>
+                  </xsd:all>
+              </xsd:complexType>
+           </xsd:element>
+           <xsd:element name="SalaryResponse">
+              <xsd:complexType>
+                  <xsd:all>
+                      <xsd:element name="clientName" type="string"/>
+                      <xsd:element name="salary" type="float"/>
+                  </xsd:all>
+              </xsd:complexType>
+           </xsd:element>
+       </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="CalculateSalaryRequest">
+        <wsdl:part name="body" element="xsd1:SalaryRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="CalculateSalaryResponse">
+        <wsdl:part name="body" element="xsd1:SalaryResponse"/>
+    </wsdl:message>
+
+    <wsdl:portType name="ClientPortType">
+        <wsdl:operation name="CalculateSalary">
+           <wsdl:input message="tns:CalculateSalaryRequest"/>
+           <wsdl:output message="tns:CalculateSalaryResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="ClientBinding" type="tns:ClientPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CalculateSalary">
+           <soap:operation soapAction="http://example.com/CalculateSalary"/>
+           <wsdl:input>
+               <soap:body use="literal"/>
+           </wsdl:input>
+           <wsdl:output>
+               <soap:body use="literal"/>
+           </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="ClientService">
+        <wsdl:port name="ClientPort" binding="tns:ClientBinding">
+           <soap:address location="http://localhost:15099/client"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

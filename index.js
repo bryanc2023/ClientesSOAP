@@ -5,24 +5,24 @@ var soap = require('soap');
 var server;
 
 var myService = {
-  StockQuoteService: {
-    StockQuotePort: {
-      GetLastTradePrice: function(args) {
-        if (args.tickerSymbol === 'trigger error') {
-          throw new Error('triggered server error');
-        } else {
-          return { price: 19.56 };
-        }
+  ClientService: {
+    ClientPort: {
+      CalculateSalary: function(args) {
+        const ratePerHour = 10; // Tarifa por hora (ejemplo: $10 por hora)
+        const { clientName, hoursWorked } = args;
+        
+        const salary = ratePerHour * hoursWorked;
+        return { clientName, salary };
       }
     }
   }
 };
 
-var xml = require('fs').readFileSync('stockquote.wsdl', 'utf8');
+var xml = require('fs').readFileSync('client.wsdl', 'utf8');
 
 server = http.createServer(function(request,response) {
   response.end('404: Not Found: ' + request.url);
 });
 
 server.listen(8000);
-soap.listen(server, '/stockquote', myService, xml);
+soap.listen(server, '/client', myService, xml);
