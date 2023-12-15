@@ -18,8 +18,8 @@ https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Servidor
 
 * Cliente #1 corriendo:
 Nombre: Bryan, Horas: 40
-https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Cliente#1.png
+https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Cliente1.png
 
 * Cliente #2 corriendo:
 Nombre: Alex, Horas: 100
-https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Cliente#2.png
+https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Cliente2.png
