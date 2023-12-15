@@ -16,8 +16,9 @@ Funcionamiento: En consola se muestra a travez del consumo del web service el sa
 * Servidor corriendo:
 https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Servidor.png
 
-* Cliente corriendo:
-https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Cliente #1.png
+* Cliente #1 corriendo:
+Nombre: Bryan, Horas: 40
+https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Cliente#1.png
 
-* Resultado:
-https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Image
+Nombre: Alex, Horas: 100
+https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Cliente#2.png
