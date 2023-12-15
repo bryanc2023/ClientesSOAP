@@ -12,3 +12,12 @@ Funcionamiento: En consola se muestra a travez del consumo del web service el sa
 * Correr servidor: `node index.js`
 * Correr cliente: `node cliente.js`
 
+## Ejemplo de funcionamiento
+* Servidor corriendo:
+https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Servidor.png
+
+* Cliente corriendo:
+https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Imagenes/Cliente #1.png
+
+* Resultado:
+https://raw.githubusercontent.com/bryanc2023/ClientesSOAP/main/Image

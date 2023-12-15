@@ -5,8 +5,8 @@ var url = 'http://127.0.0.1:8000/client?wsdl';
 var endpoint_url = 'http://127.0.0.1:8000/client';
 
 const args = {
-  clientName: 'Bryan',
-  hoursWorked: 40 // Horas trabajadas (ejemplo: 40 horas)
+  clientName: 'Alex',
+  hoursWorked: 1000 // Horas trabajadas (ejemplo: 40 horas)
 };
 
 
